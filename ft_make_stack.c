@@ -12,11 +12,14 @@
 
 #include "libft.h"
 
-static void	ft_make_stack(s_stack stack){
-	*stack = ft_lstnew( /* int* */);
-	while (/* condition */)
+static void	ft_make_stack(s_stack stack, char *arr){	//arr is the array taken from the argv, with numbers in char, to be converted to int
+	*stack = ft_lstnew(ft_atoi(arr));
+	arr++;
+	while (arr)
 	{
-		tmp = ft_lstnew( /* int* */ );
+		tmp = ft_lstnew(atoi(arr));
 		ft_lstadd_front(stack, tmp);
+		//these two could be in just one line but perhaps this is clearer
+		arr++;
 	}
 }
