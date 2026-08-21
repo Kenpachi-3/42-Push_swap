@@ -8,7 +8,7 @@ float disorder_metric(s_stack a)
     mistakes = 0;
     total_pairs = 0;
     tmp_fixed = a;
-    //tmp_changing = 0; NECESSARY?
+    tmp_changing = 0;// NECESSARY?
     //while the main node is not the last
     while (tmp_fixed != ft_lstlast(a))
     {
