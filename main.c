@@ -1,5 +1,7 @@
 #include "libft.h";
 
+static void	ft_make_stack(s_stack stack, char *arr);
+
 int main(int argc, char **argv)
 {
     s_stack stack;
