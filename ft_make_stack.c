@@ -38,17 +38,29 @@ static void	ft_make_stack(s_stack stack, char *arr)
 	char	*tmp_arr;
 	int	*tmp_int;
 	int	num;
+	int	i;
 	
 	tmp_arr = arr;
-	num = ft_atoi(tmp_arr);
+	tmp_arr++;
+	num = atoi(tmp_arr);
 	*stack = ft_lstnew(num);
 	num = ft_digit_count(n);
-	arr += num;//MOVE FORWARD a number of steps equal to the number of digits of the input number
-	while (arr)
+	i = 0;
+	while (i < num && tmp_arr)
 	{
-		tmp_int = ft_lstnew(atoi(tmp_arr));
+		tmp_arr++;
+	}
+//	arr += num;//MOVE FORWARD a number of steps equal to the number of digits of the input number
+	while (tmp_arr)
+	{
+		num = atoi(tmp_arr);
+		tmp_int = ft_lstnew(num);
 		ft_lstadd_back(stack, tmp_int);//fix num = digit add to arr
 		//these two could be in just one line but perhaps this is clearer
-		tmp_arr++;
+		i = 0;
+		while (i < num && tmp_arr)
+		{
+			tmp_arr++;
+		}
 	}
 }
