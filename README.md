@@ -1,14 +1,13 @@
-*This project has been created as part of the 42 curriculum by ntshuma.*
+*This project has been created as part of the 42 curriculum by fpresti and ntshuma.*
 
 ***
 
-# ft_printf
-## Recoding printf(). 
+# push_swap
 
 ***
 
 # Description
-This project is about recoding printf() and learning about variadic functions. After a successful submission of this project it will be an addition to Libft so that it can be used in future C projects. 
+This project is about sorting data on a stack, with a limited set of instructions, usig a the lowest number of operations possible. Algorithms were manipulated to sort data optimally.
 
 # Instructions
 
