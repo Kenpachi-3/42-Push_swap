@@ -23,3 +23,5 @@ int is_int_overflow(long n);
 int parse_int(char *str)
 long ft_atol(char *str);
 void error_exit(void);
+
+# endif
