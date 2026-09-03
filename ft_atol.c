@@ -15,7 +15,7 @@
 long ft_atol(char *str)
 {
     int sign = 1;
-    long result = 0;
+    long result = 0; // use long long instead of long
     int i = 0;
 
     if (str[i] == '-')
