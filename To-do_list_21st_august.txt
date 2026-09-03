@@ -10,3 +10,4 @@
 10. Custom adaptive
 11. Change checker so that: while (i < ft_strlen(str)) {if(ft_is_digit ok) else Error}
 12. Combine checker is_int_overfow make_stack parse_int : use atol once and other repeated functionds and processes
+13. Add an index as a property of the lists
