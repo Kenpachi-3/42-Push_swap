@@ -1,0 +1,10 @@
+1. Test disorder metric
+2. Double-check push_swap_functions
+3. Test push_swap_functions
+4. Write parser
+5. Find a solution for parsing multiple digits: atoi has to restart AFTER the full number
+6. Error-handling function
+7. Simple: min/max extra
+8. Medium: chunk-based
+9. Complex: radix
+10. Custom adaptive
