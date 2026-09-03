@@ -1,0 +1,1 @@
+Long long come variabile temporanea per verificare in atoi modificato il numero dato a input se < > di int_max e int_min casta in int, altrimenti ERROR
