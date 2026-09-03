@@ -16,5 +16,6 @@ int main(int argc, char **argv)
         printf("%d\n", tmp->content);
         tmp = tmp->next;
     }
+    printf("Disorder = %f\n"; ft_disorder_metric(stack));
     return (0);
 }

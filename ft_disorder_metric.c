@@ -1,4 +1,4 @@
-float disorder_metric(s_stack a)
+float ft_disorder_metric(s_stack a)
 {
     int mistakes;
     int total_pairs;
