@@ -13,7 +13,7 @@ char *sa(s_stack stack_a){
 }
 
 void sb(s_stack stack_b){
-    swap(stacks_b);
+    swap(stack_b);
     return ("sb");
 }
 
@@ -43,7 +43,7 @@ void push(s_stack stack_a, s_stack stack_b, int i)
 //in the end, is this push really necessary, given that it requires an if condition with an additional variable? What about doing just pa and pb?
 
 void pa(s_stack stack_a, s_stack stack_b){
-    push(stack_a, stack_b 1);
+    push(stack_a, stack_b, 1);
     return ("pa");
 }
 
@@ -52,7 +52,7 @@ void pb(s_stack stack_a, s_stack stack_b){
     return ("pb");
 }
 
-void rotate(s_stack stak, int i)
+void rotate(s_stack stack, int i)
 {
     void    *tmp;
     //stacks, i = 1 rotate, i = -1 reverse
