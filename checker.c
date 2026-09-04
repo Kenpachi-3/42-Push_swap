@@ -35,4 +35,3 @@ int is_valid_int(char *str)
             return(0);
         return(1); 
 }
-
