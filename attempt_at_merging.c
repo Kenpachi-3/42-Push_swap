@@ -59,7 +59,7 @@ static void	ft_make_stack(s_stack stack, char *arr){	//arr is the array taken fr
 #include <limits.h>
 #include "checker.h"
 
-int is_int_overflow(long n)
+int is_int_overflow(long long n)
 {
     if (n > INT_MAX || n < INT_MIN)
         return(0);
