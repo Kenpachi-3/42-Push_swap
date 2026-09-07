@@ -3,6 +3,34 @@
 //STILL IN PROGRESS
 
 //CHECKER
+//CHECKER
+//CHECKER
+
+long ft_atol(char *str)
+{
+    int sign = 1;
+    long result = 0; // use long long instead of long
+    int i = 0;
+
+    if (str[i] == '-')
+    {
+        sign = -1;
+        i++; 
+    }
+    else if (str[i] == '+')
+    {
+       sign = 1;
+        i++; 
+    }
+    while (str[i] >= '0' && str[i] <= '9')
+    {
+        result = result * 10 + (str[i] - '0');
+        i++;
+    }
+        return(result * sign);
+}
+
+//CHECKER
 //CHECHER
 //CHECKER
 
@@ -62,9 +90,9 @@ static void	ft_make_stack(s_stack stack, char *arr){	//arr is the array taken fr
 int is_int_overflow(long long n)
 {
     if (n > INT_MAX || n < INT_MIN)
-        return(0);
-    else 
         return(1);
+    else 
+        return(0);
 }
 
 //PARSE_INT
@@ -77,8 +105,8 @@ int parse_int(char *str)
 {
     if (!is_valid_int(str))
         error_exit();
-    long    l = ft_atol(str);
-    if (is_int_overflow(l) != 1)
+    long long l = ft_atol(str);
+    if (is_int_overflow(l))
         error_exit();
     return(l);
 }
