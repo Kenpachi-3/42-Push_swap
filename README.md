@@ -13,6 +13,33 @@ The project implements three tiers of sorting strategy — easy, medium, and har
 
 # Instructions
 
+### Building the Program
+To build `push_swap`, type the following command in your terminal:
+```bash
+make
+```
+
+### Maintenance Rules
+* Remove temporary binary object files (`.o` files):
+```bash
+  make clean
+```
+* Remove object files AND the final compiled `push_swap`:
+```bash
+  make fclean
+```
+* Force a complete clean rebuild of the program from scratch:
+```bash
+  make re
+```
+
+### Running the Program
+To run `push_swap`, type the following command in your terminal:
+```bash
+./push_swap 3 1 2
+```
+As a result of running the program, a list of operations will be printed out, each on a separate line. If the stack is already sorted (has a disorder metric of 0) then there will be no output at all.
+
 # Resources
 https://www.geeksforgeeks.org/c/printf-in-c/
 
