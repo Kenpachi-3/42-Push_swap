@@ -8,7 +8,7 @@ void swap(s_stack stack){
 //what about adding a swap function in libft? like ft_lstswap(node1, node2)
 
 char *sa(s_stack stack_a){
-    swap(stacks_a);
+    swap(stack_a);
     return ("sa");
 }
 
@@ -56,7 +56,7 @@ void rotate(s_stack stack, int i)
 {
     void    *tmp;
     //stacks, i = 1 rotate, i = -1 reverse
-    if(i == 1)
+    if(i == 1) //this one might actually be reverse rotate, needs to be checked
     {
         tmp = stack->content;
         //what should I do first? Need to check by testing
@@ -68,6 +68,12 @@ void rotate(s_stack stack, int i)
         ft_lstlast(stack)->content = tmp;
         //again, doing lstlast does it actually move the pointer or not?
         //check in the code for libft
+
+        //NEW IDEA
+        //node ft_lstnew(ft_lstlast(stack))
+        //ft_add -back or front?- ft_add(node, stack)
+        //stack = node
+        //ft_lst_delone(ft_lstlast(stack))
     }
     else if (1 == -1)
     {

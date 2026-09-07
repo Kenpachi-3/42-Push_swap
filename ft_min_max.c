@@ -34,11 +34,11 @@ static void *ft_find_min(s_stack stack)
 void    ft_min_max(s_stack stack_a, s_stack stack_b)
 {
     if (stack == NULL)
-        //ERROR
+        error_exit();
     while (ft_lstsize(stack_a) > 1)
     {
         //ft_display(pb(ft_find_min(stack_a), stack_b));
-        ft_display(pb((ft_find_min_or_max(stack_a, "min"), stack_b));
+        ft_display(pb(ft_find_min_or_max(stack_a, "min"), stack_b));
     }
     ft_display(pb(stack_a, stack_b));
     while (ft_lstsize(Stack_b) > 1)
@@ -47,4 +47,36 @@ void    ft_min_max(s_stack stack_a, s_stack stack_b)
         ft_display(rb(stack_b));
     }
     ft_display(pb(stack_a, stack_b));
+}
+
+//technically more correct version
+//define "index" attribute in header for stack, so that stack->index = 0 per each node at the starting point
+void    ft_min_max_2(s_stack stack)
+{
+    int i;
+    int j;
+    int index;
+    s_stack tmp;
+
+    if (stack == NULL)
+        error_exit();
+    i = 0;
+    j = 0;
+    tmp = stack;
+    while (i < ft_lst_size(stack) - 1)
+    {
+        (*ft_find_min_or_max(tmp, "min"))->index = i + 1;
+        while (stack->next->index != i + 1)
+        {
+            ft_display(ra(stack));
+            j++;
+        }
+        while (j > 0)
+        {
+            ft_display(sa(stack));
+            ft_display(rra(stack));
+            j--;
+        }
+        tmp = tmp->next;
+    }
 }
